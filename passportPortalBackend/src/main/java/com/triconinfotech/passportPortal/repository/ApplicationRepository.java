@@ -1,0 +1,15 @@
+package com.triconinfotech.passportPortal.repository;
+
+import java.util.UUID;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.triconinfotech.passportPortal.models.Application;
+
+@Repository
+public interface ApplicationRepository extends JpaRepository<Application, UUID>{
+
+	boolean findByEmail(String string);
+
+}
